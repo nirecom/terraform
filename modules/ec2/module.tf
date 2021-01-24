@@ -3,7 +3,9 @@ variable "availability_zone" {}
 variable "instance_type" {}
 variable "subnet_id" {}
 variable "tags_name" {}
-variable "private_ip" {}
+variable "private_ip" {
+  default = ""
+}
 variable "vpc_security_group_ids" {}
 
 output "id" {
