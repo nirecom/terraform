@@ -3,6 +3,7 @@ variable "instance_type" {}
 variable "subnet_id" {}
 variable "tags_name" {}
 variable "private_ip" {}
+variable "vpc_security_group_ids" {}
 
 resource "aws_instance" "this" {
   ami = var.ami
