@@ -6,7 +6,7 @@ module "module_ec2_master" {
   source = "../modules/"
 
   availability_zone = "ap-northeast-1a"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
   private_ip = "10.16.82.10"
   subnet_id = "subnet-0b03e0e88fb61e406"
   tags_name = "k8s-master-ne1a"
