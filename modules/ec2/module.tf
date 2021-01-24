@@ -6,6 +6,10 @@ variable "tags_name" {}
 variable "private_ip" {}
 variable "vpc_security_group_ids" {}
 
+output "id" {
+  value = aws_instance.this.id
+}
+
 resource "aws_instance" "this" {
   ami = var.ami
   tags = {
