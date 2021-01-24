@@ -3,8 +3,8 @@ provider "aws" {
 }
  
 resource "aws_instance" "k8s-masters" {
-#  count = length( var.region_postfix )
-  count = 1
+  count = length( var.region_postfix )
+#  count = 1
   ami = var.ami
   instance_type = "t3.small"
   tags = {
