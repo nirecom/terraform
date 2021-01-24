@@ -17,7 +17,7 @@ module "module_ec2_worker" {
 
   availability_zone = "ap-northeast-1c"
   instance_type = "t3.small"
-  private_ip = "10.16.84.10"
+  private_ip = "10.16.84.20"
   subnet_id = "subnet-07c65d25ce8dbaacf"
   tags_name = "k8s-worker-ne1c"
   vpc_security_group_ids = "sg-0cfe43e590b69aee6"
