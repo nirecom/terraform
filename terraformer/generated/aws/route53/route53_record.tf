@@ -1,6 +1,6 @@
 resource "aws_route53_record" "tfer--Z07386303DNF5EP95AEU0_nire-002E-to-002E-_NS_" {
   name    = "nire.to"
-  records = ["ns-1424.awsdns-50.org.", "ns-1897.awsdns-45.co.uk.", "ns-523.awsdns-01.net.", "ns-503.awsdns-62.com."]
+  records = ["ns-1424.awsdns-50.org.", "ns-1897.awsdns-45.co.uk.", "ns-503.awsdns-62.com.", "ns-523.awsdns-01.net."]
   ttl     = "172800"
   type    = "NS"
   zone_id = "${aws_route53_zone.tfer--Z07386303DNF5EP95AEU0_nire-002E-to.zone_id}"
@@ -128,7 +128,7 @@ resource "aws_route53_record" "tfer--Z3NXXB17ZWWQ87_nire-002E-com-002E-_A_" {
 
 resource "aws_route53_record" "tfer--Z3NXXB17ZWWQ87_nire-002E-com-002E-_MX_" {
   name    = "nire.com"
-  records = ["1 ASPMX.L.GOOGLE.COM.", "5 ALT2.ASPMX.L.GOOGLE.COM.", "10 ALT3.ASPMX.L.GOOGLE.COM.", "10 ALT4.ASPMX.L.GOOGLE.COM.", "5 ALT1.ASPMX.L.GOOGLE.COM."]
+  records = ["1 ASPMX.L.GOOGLE.COM.", "10 ALT3.ASPMX.L.GOOGLE.COM.", "5 ALT1.ASPMX.L.GOOGLE.COM.", "5 ALT2.ASPMX.L.GOOGLE.COM.", "10 ALT4.ASPMX.L.GOOGLE.COM."]
   ttl     = "300"
   type    = "MX"
   zone_id = "${aws_route53_zone.tfer--Z3NXXB17ZWWQ87_nire-002E-com.zone_id}"
@@ -136,7 +136,7 @@ resource "aws_route53_record" "tfer--Z3NXXB17ZWWQ87_nire-002E-com-002E-_MX_" {
 
 resource "aws_route53_record" "tfer--Z3NXXB17ZWWQ87_nire-002E-com-002E-_NS_" {
   name    = "nire.com"
-  records = ["ns-1892.awsdns-44.co.uk.", "ns-248.awsdns-31.com.", "ns-1423.awsdns-49.org.", "ns-593.awsdns-10.net."]
+  records = ["ns-1423.awsdns-49.org.", "ns-593.awsdns-10.net.", "ns-1892.awsdns-44.co.uk.", "ns-248.awsdns-31.com."]
   ttl     = "172800"
   type    = "NS"
   zone_id = "${aws_route53_zone.tfer--Z3NXXB17ZWWQ87_nire-002E-com.zone_id}"

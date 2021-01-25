@@ -7,5 +7,5 @@ resource "aws_db_subnet_group" "tfer--db-002D-subnet-002D-group-002D-internal" {
 resource "aws_db_subnet_group" "tfer--default-002D-vpc-002D-0d95857c2d53f0e9f" {
   description = "Created from the RDS Management Console"
   name        = "default-vpc-0d95857c2d53f0e9f"
-  subnet_ids  = ["subnet-028a09da078d4425b", "subnet-006a5ecaa0eaa23ed"]
+  subnet_ids  = ["subnet-006a5ecaa0eaa23ed", "subnet-028a09da078d4425b"]
 }

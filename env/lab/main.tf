@@ -11,8 +11,13 @@ module "ec2_lab" {
   vpc_security_group_ids = "sg-0d2b31bcdda20aebe"
 }
 
-module "aws_eip_association" {
+module "eip_association_lab" {
   source = "../../modules/eip_association"
-  allocation_id = "eipalloc-08a0ed9328f0dd299"
   instance_id = module.ec2_lab.id
+  allocation_id = module.eip_lab.id
+}
+
+module "eip_lab" {
+  source = "../../modules/eip"
+  tags_name = "lab"
 }

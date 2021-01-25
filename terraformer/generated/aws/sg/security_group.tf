@@ -497,26 +497,6 @@ resource "aws_security_group" "tfer--K8sWorkerSG_sg-002D-0cfe43e590b69aee6" {
   }
 
   ingress {
-    cidr_blocks      = ["10.16.0.0/16"]
-    description      = "etcd"
-    from_port        = "2379"
-    ipv6_cidr_blocks = ["2406:da14:106:c500::/56"]
-    protocol         = "tcp"
-    self             = "false"
-    to_port          = "2379"
-  }
-
-  ingress {
-    cidr_blocks      = ["10.16.0.0/16"]
-    description      = "etcd"
-    from_port        = "2380"
-    ipv6_cidr_blocks = ["2406:da14:106:c500::/56"]
-    protocol         = "tcp"
-    self             = "false"
-    to_port          = "2380"
-  }
-
-  ingress {
     cidr_blocks = ["10.16.0.0/16"]
     from_port   = "10250"
     protocol    = "tcp"
@@ -568,6 +548,24 @@ resource "aws_security_group" "tfer--LabServerSecurityGroup-002D-v2_sg-002D-0d2b
     protocol    = "tcp"
     self        = "false"
     to_port     = "80"
+  }
+
+  ingress {
+    cidr_blocks      = ["10.16.0.0/16"]
+    from_port        = "-1"
+    ipv6_cidr_blocks = ["2406:da14:106:c500::/56"]
+    protocol         = "icmp"
+    self             = "false"
+    to_port          = "-1"
+  }
+
+  ingress {
+    cidr_blocks      = ["10.16.80.0/20"]
+    from_port        = "-1"
+    ipv6_cidr_blocks = ["2406:da14:106:c580::/60"]
+    protocol         = "icmpv6"
+    self             = "false"
+    to_port          = "-1"
   }
 
   name = "LabServerSecurityGroup-v2"
