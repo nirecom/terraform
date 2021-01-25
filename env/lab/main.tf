@@ -4,7 +4,7 @@ module "ec2_lab" {
   source = "../../modules/ec2"
   ami = "ami-0834bee8eb6dae7f0"
   availability_zone = "ap-northeast-1c"
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
 #  private_ip = ""
   subnet_id = data.aws_subnet.selected.id
   tags_name = "lab"
