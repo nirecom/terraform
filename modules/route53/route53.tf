@@ -8,6 +8,7 @@ resource "aws_route53_record" "this" {
   type = var.type
   records = var.records
   ttl = 300
+  allow_overwrite = true
 }
 
 data "aws_route53_zone" "this" {

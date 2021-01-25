@@ -6,9 +6,9 @@ module "ec2_lab" {
   availability_zone = "ap-northeast-1c"
   instance_type = "t3.micro"
 #  private_ip = ""
-  subnet_id = data.aws_subnet.this.id
+  subnet_id = data.aws_subnet.selected.id
   tags_name = "lab"
-  vpc_security_group_ids = "sg-0d2b31bcdda20aebe"
+  vpc_security_group_ids = data.aws_security_group.selected.id
 }
 
 module "eip_association_lab" {
@@ -29,9 +29,17 @@ module "route53_lab" {
   records = [ module.eip_lab.public_ip ]
 }  
 
-data "aws_subnet" "this" {
+data "aws_subnet" "selected" {
   filter {
     name = "tag:Name"
     values = ["external-ne1c"]
   }
 }
+
+data "aws_security_group" "selected" {
+  filter {
+    name = "tag:Name"
+    values = ["lab"]
+  }
+}
+
