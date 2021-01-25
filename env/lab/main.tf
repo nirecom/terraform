@@ -21,3 +21,10 @@ module "eip_lab" {
   source = "../../modules/eip"
   tags_name = "lab"
 }
+
+module "route53_lab" {
+  source = "../../modules/route53"
+  name = "lab"
+  type = "A"
+  records = [ module.eip_lab.public_ip ]
+}  
